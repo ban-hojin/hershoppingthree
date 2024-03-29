@@ -1,0 +1,231 @@
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav-header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  
+}
+
+.nav-header * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.menu{
+  display: flex;
+  list-style-type: none;
+  padding: 20px;
+  justify-content: center; /* 추가된 부분 */
+}
+
+.nav-logo{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.nav-me.menu li a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  margin-left: 20px;
+  font-size: 130%;
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* 가상 요소의 위치 기준점 설정 */
+  display: inline-block; /* 가상 요소의 위치 조정을 위해 필요 */
+}
+
+.menu li a {
+  text-decoration: none;
+  text-align: center;
+  display: inline; /* 또는 display: inline-block; */
+  color: black;
+  margin-left: 20px;
+  font-size: 130%;
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* 가상 요소의 위치 기준점 설정 */
+  display: inline-block; /* 가상 요소의 위치 조정을 위해 필요 */
+}
+
+.menu li a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  bottom: -5px; /* 밑줄의 위치 조정 */
+  left: 0;
+  transform: scale(0); /* 초기 상태에서는 보이지 않도록 설정 */
+  transition: transform 0.3s ease; /* 애니메이션 효과 적용 */
+}
+
+.menu li a:hover::after, .menu li a.active::after {
+  transform: scale(1); /* 호버 또는 활성 상태에서는 밑줄이 보이도록 설정 */
+}
+
+nu-area{
+  display: flex;
+  justify-content: center;
+}
+.burger-menu{
+  margin-left: 20px;
+}
+
+
+
+.card{
+  border:none !important;
+  margin-bottom: 10px;
+}
+
+.choice{
+  font-size:11px;
+  color: #63786a;
+  font-weight: bold;
+  height: 20px;
+}
+
+.new-product {
+  font-size: 11px;
+  height: 20px;
+}
+.login-form{
+  width:40em;
+}
+.login-area{
+  display: flex;
+  justify-content: center;
+}
+
+.form-control:valid {
+  background-color:  white !important;
+}
+
+.product-detail-img{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-detail-img img{
+  width: 100%;
+}
+.product-info{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.drop-down{
+  margin-top:20px;
+}
+
+.add-button{
+  margin-top:20px;
+  width: 100%;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  z-index: 1;
+}
+.hide{
+  visibility:hidden
+}
+
+
+@media screen and (max-width: 63rem) {
+  .hide {
+    visibility:visible;
+  }
+  .menu {
+    display: none;
+  }
+  .search-box{
+    display: none;
+  }
+}
+
+.side-menu {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: burlywood;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index:2
+}
+.side-menu-list button {
+  margin: 5px;
+  border: none;
+  background: none;
+  width: 120px;
+}
+
+.side-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: none;
+  background: none;
+}
+
+.side-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-menu-list button:hover {
+  background-color: beige;
+  border-radius: 3px;
+} 
+
+.choice-recommended {
+  color: red;
+}
+
+.new-product-highlight {
+  color: blue;
+  font-family: 'Cursive';
+}
+
+.product-title {
+  font-size: 130%; /* 기존 대비 30% 크게 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+.product-price, .new-product-highlight {
+  text-align: center; /* 가격과 신제품 표시를 가운데로 정렬 */
+}
+
+/* 기존 스타일 */
+.choice-recommended {
+  color: red;
+}
+
+.new-product-highlight {
+  color: blue;
+  font-family: 'Cursive';
+}
+/* 전역 CSS 파일에 추가 */
+.search-box {
+  position: absolute; /* 또는 relative의 부모 내에서 오른쪽 정렬을 원할 경우 */
+  right: 0; /* 부모 컨테이너의 오른쪽 가장자리에 맞춤 */
+  margin-top: 20px; /* 또는 필요한 거리만큼 조정 */
+   }
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
